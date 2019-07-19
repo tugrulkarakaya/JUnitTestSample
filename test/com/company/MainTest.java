@@ -13,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MainTest {
     private String str;
+
     @BeforeAll
     public static void beforeAll(TestInfo testInfo){
         System.out.println("Run Once before all "+testInfo.getDisplayName());
@@ -37,7 +38,6 @@ class MainTest {
 
     @Test
     @Disabled
-    @Ignore
     void length_exception_disabled(){
         String str = null;
         assertThrows(NullPointerException.class, ()->str.length());
